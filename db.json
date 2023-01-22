@@ -7,7 +7,7 @@
       "price": 1000,
       "productCode": "GDN-0011",
       "releaseDate": "March 19, 2016",
-      "starRating": 2
+      "starRating": 5
     },
     {
       "id": 2,
@@ -16,7 +16,7 @@
       "productCode": "GDN-0011",
       "price": 1000,
       "releaseDate": "March 19, 2016",
-      "starRating": 1
+      "starRating": 5
     },
     {
       "id": 3,
@@ -35,8 +35,18 @@
       "releaseDate": "March 18, 2016",
       "description": "15 gallon capacity rolling garden cart",
       "price": 32.99,
-      "starRating": 4,
+      "starRating": 3,
       "imageUrl": "http://openclipart.org/image/300px/svg_to_png/58471/garden_cart.png"
+    },
+    {
+      "releaseDate": "23/1/2023",
+      "starRating": 3,
+      "productName": "shovel",
+      "price": 1000,
+      "productCode": "",
+      "imageUrl": "https://www.shutterstock.com/image-vector/funny-shovel-cartoon-style-vector-260nw-587680343.jpg",
+      "description": "shovel",
+      "id": 5
     }
   ]
 }

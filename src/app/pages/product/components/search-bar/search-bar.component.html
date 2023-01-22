@@ -1,4 +1,9 @@
-<form #f="ngForm" (ngSubmit)="onSubmit(f)" validate>
+<form
+    #f="ngForm"
+    (ngSubmit)="onSubmit(f)"
+    validate
+    class="flex items-center justify-between"
+>
     <div class="form-control">
         <div class="input-group">
             <input
@@ -14,4 +19,5 @@
             </button>
         </div>
     </div>
+    <a routerLink="/product-add" class="btn">+ Add new product</a>
 </form>

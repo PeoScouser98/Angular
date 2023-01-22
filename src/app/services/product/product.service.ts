@@ -12,8 +12,11 @@ export class ProductService {
     }
     searchData(keyword: string) {
         return this.http.get<Product[]>(
-            `http://localhost:3001/products?name_like=${keyword}`
+            `http://localhost:3001/products?productName_like=${keyword}`
         );
+    }
+    addProduct(newProduct: Partial<Product>) {
+        return this.http.post(`http://localhost:3001/products`, newProduct);
     }
     deleteData(id: number) {
         return this.http.delete(`http://localhost:3001/products/${id}`);

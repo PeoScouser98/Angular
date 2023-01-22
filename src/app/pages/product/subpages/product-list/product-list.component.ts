@@ -1,10 +1,10 @@
 import Product from '@/interfaces/product';
 import { ProductService } from '@/services/product/product.service';
-import { Component, OnInit, Input, Output } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
     selector: 'app-product',
-    templateUrl: './product.component.html',
+    templateUrl: './product-list.component.html',
 })
 export class ProductComponent {
     productList: Product[] = [];
