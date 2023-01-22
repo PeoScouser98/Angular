@@ -1,0 +1,9 @@
+<div class="flex flex-col gap-10 py-5">
+    <!--  if this component dispatch an event that provides output data, component that provides input data will get new data and re-render -->
+    <app-search-bar (searchEvent)="onGetSearchResult($event)"></app-search-bar>
+    <!-- parent component pass children component's data -->
+    <app-product-list
+        [products]="productList"
+        (deleteProductEvent)="onDeleteProduct($event)"
+    ></app-product-list>
+</div>

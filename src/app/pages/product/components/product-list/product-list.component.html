@@ -1,0 +1,47 @@
+<table class="table w-full">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>image</th>
+            <th>product</th>
+            <th>price</th>
+            <th>available</th>
+            <th>rating</th>
+            <th>actions</th>
+        </tr>
+    </thead>
+
+    <tbody *ngFor="let item of products">
+        <tr>
+            <td>{{ item.id }}</td>
+            <td>
+                <img
+                    [attr.src]="item.imageUrl"
+                    alt=""
+                    class="max-w-[60px] h-[60px] object-cover"
+                />
+            </td>
+            <td>{{ item.productName }}</td>
+            <td>{{ item.price }}</td>
+            <td>{{ item.releaseDate }}</td>
+            <td>
+                <p-rating
+                    [ngModel]="item.starRating"
+                    [cancel]="false"
+                    (onRate)="ratingProduct($event, item.id)"
+                ></p-rating>
+            </td>
+            <td>
+                <button
+                    class="btn btn-error btn-sm"
+                    (click)="deleteProduct(item.id)"
+                >
+                    Remove
+                </button>
+            </td>
+        </tr>
+        <tr *ngIf="products.length === 0">
+            <td colspan="6">No result</td>
+        </tr>
+    </tbody>
+</table>

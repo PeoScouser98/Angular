@@ -1,0 +1,17 @@
+<form #f="ngForm" (ngSubmit)="onSubmit(f)" validate>
+    <div class="form-control">
+        <div class="input-group">
+            <input
+                type="search"
+                class="input input-bordered w-fit"
+                placeholder="Type something ..."
+                name="searchValue"
+                [(ngModel)]="searchValue"
+                (input)="handleSearchChange()"
+            />
+            <button type="submit" class="btn">
+                <i class="bi bi-search"></i>
+            </button>
+        </div>
+    </div>
+</form>
